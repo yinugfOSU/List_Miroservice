@@ -13,6 +13,7 @@ All responses are in JSON format.
 To recieve data, do a https GET request to http://localhost:4000/items. Your response will be a list of items in JSON.
 
 Example fetch all items request:
+/*
 fetch(http://localhost:4000/items)
     .then(res => {
         if(!res.ok) {
@@ -20,6 +21,8 @@ fetch(http://localhost:4000/items)
         }
         return res.json();
     });
+*/
+
 Example response:
 [
   {
