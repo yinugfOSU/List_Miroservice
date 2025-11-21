@@ -10,9 +10,9 @@ To request data, fetch using the standard HTTP methods:
   DELETE /items/:id → deletes the item with the specified id
 
 All responses are in JSON format.
-To recieve data, do a https GET request to http://localhost:4000/items. Your response will be a list of items in JSON.
+To request data, do a https GET request to http://localhost:4000/items. Your response will be a list of items in JSON.
 
-Example fetch all items request:
+Example of requesting all items and receving a JSON back:
 /*
 fetch(http://localhost:4000/items)
     .then(res => {
@@ -33,3 +33,4 @@ Example response:
     "notes": "for brother's party"
   }
 ]
+Requesting and receiving is done in one go with fetch and return res.json().
