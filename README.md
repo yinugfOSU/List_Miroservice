@@ -1,6 +1,6 @@
 # List_Miroservice
 My microservice provides a REST API at http://localhost:4000/items for managing shopping list items. 
-To request data, use the standard HTTP methods:
+To request data, fetch using the standard HTTP methods:
   GET /items → retrieves all items
 
   GET /items/:id → retrieves a single item by its id
@@ -13,8 +13,13 @@ All responses are in JSON format.
 To recieve data, do a https GET request to http://localhost:4000/items. Your response will be a list of items in JSON.
 
 Example fetch all items request:
-GET http://localhost:4000/items
-
+fetch(http://localhost:4000/items)
+    .then(res => {
+        if(!res.ok) {
+            throw Error("Error! I could not fetch shopping lists");
+        }
+        return res.json();
+    });
 Example response:
 [
   {
