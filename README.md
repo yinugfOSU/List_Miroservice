@@ -33,4 +33,5 @@ Example response:
     "notes": "for brother's party"
   }
 ]
+
 Requesting and receiving is done in one go with fetch and return res.json().
