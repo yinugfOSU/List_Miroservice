@@ -1,5 +1,5 @@
 # List_Miroservice
-This microservice provides a REST API at http://localhost:4000/items for managing shopping list items. 
+My microservice provides a REST API at http://localhost:4000/items for managing shopping list items. 
 To request data, use the standard HTTP methods:
   GET /items → retrieves all items
 
