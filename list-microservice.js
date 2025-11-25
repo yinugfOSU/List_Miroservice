@@ -38,7 +38,7 @@ app.post("/items", (req, res) => {
 
 // DELETE an item by ID
 app.delete("/items/:id", (req, res) => {
-  const { id } = req.params;
+  const id = Number(req.params.id);
 
   const originalLength = shoppingList.length;
   shoppingList = shoppingList.filter(item => item.id !== id);
