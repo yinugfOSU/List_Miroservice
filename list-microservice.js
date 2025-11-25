@@ -26,14 +26,14 @@ app.get("/items/:id", (req, res) => {
 
 // ADD an item
 app.post("/items", (req, res) => {
-  const item = req.body;
+  const newItem = req.body; 
 
-  if (!item.id || !item.itemName) {
+  if (!newItem.id || !newItem.itemName) {
     return res.status(400).json({ error: "id and itemName are required" });
   }
 
-  shoppingList.push(item);
-  res.json({ message: "Item added!", item });
+  shoppingList.push(newItem);
+  res.json({ message: "Item added!", item: newItem });
 });
 
 // DELETE an item by ID
