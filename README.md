@@ -24,6 +24,7 @@ fetch(http://localhost:4000/items)
 */
 
 Example GET all response:
+
 [
   {
     "id": 1763689721163,
@@ -35,6 +36,7 @@ Example GET all response:
 ]
 
 Example call to GET an item by its ID:
+
 fetch("http://localhost:4000/items/1763689721163")
   .then(res => res.json())
   .then(data => {
@@ -43,6 +45,7 @@ fetch("http://localhost:4000/items/1763689721163")
   .catch(err => console.error(err));
 
 Example GET response:
+
 [
   {
     "id": 1763689721163,
@@ -54,6 +57,7 @@ Example GET response:
 ]
 
 Example call to POST (add new item):
+
 fetch("http://localhost:4000/items", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
@@ -72,6 +76,7 @@ fetch("http://localhost:4000/items", {
 .catch(err => console.error(err));
 
 Example POST response: 
+
 {
   "item": {
     "id": 1763689721163,
@@ -93,6 +98,7 @@ fetch("http://localhost:4000/items/1763689721163", {
 .catch(err => console.error(err));
 
 Example DELETE response:
+
 {
   "message": "Item deleted",
   "id": 1763689721163
