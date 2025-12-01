@@ -12,8 +12,8 @@ To request data, fetch using the standard HTTP methods:
 All responses are in JSON format.
 To request data, do a https GET request to http://localhost:4000/items. Your response will be a list of items in JSON.
 
-Example call of requesting all items and receving a JSON back:
-/*
+Example call of GETting all items:
+
 fetch(http://localhost:4000/items)
     .then(res => {
         if(!res.ok) {
@@ -21,7 +21,7 @@ fetch(http://localhost:4000/items)
         }
         return res.json();
     });
-*/
+
 
 Example GET all response:
 
@@ -35,7 +35,7 @@ Example GET all response:
   }
 ]
 
-Example call to GET an item by its ID:
+Example call to GET a single item by its ID:
 
 fetch("http://localhost:4000/items/1763689721163")
   .then(res => res.json())
@@ -44,7 +44,7 @@ fetch("http://localhost:4000/items/1763689721163")
   })
   .catch(err => console.error(err));
 
-Example GET response:
+Example GET single item response:
 
 [
   {
